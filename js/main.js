@@ -59,3 +59,35 @@ function isEven(num) {
     }
     return ++num;
 }
+
+/******************/
+/**** JSnack 3 ****/
+/******************/
+console.log('*** JSnack 3 in corso ***');
+
+var names = ['Michele', 'Fabio', 'Roberto'];
+var surnames = ['Forghieri', 'Papagni', 'Marazzini'];
+var numInvitations = 5;
+var fakeNames = [];
+var x = 0; // Numero progressivo combinazioni, usato come indice di fakeNames[]
+
+for ( i = 0 ; i<names.length ; i++ ) {
+    for ( j = 0 ; j<surnames.length; j++ ) {
+        fakeNames[x++] = names[i] + ' ' + surnames[j];
+    }
+}
+
+var randomIndexes = [];
+do {
+    y = Math.floor( Math.random () * fakeNames.length);
+    if(randomIndexes.indexOf(y) == -1) {
+        randomIndexes.push(y);
+    }
+} while(randomIndexes.length < numInvitations );
+
+console.log('Ecco la lista degli invitati dal Grande Gatsby:');
+for(i=0 ; i<numInvitations ; i++) {
+    console.log('Numero ' + i + ': ' + fakeNames[randomIndexes[i]]);
+}
+console.log('*** JSnack 2 completato ***');
+console.log('---------------------------------------------------------');
