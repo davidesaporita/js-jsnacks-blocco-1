@@ -89,5 +89,9 @@ console.log('Ecco la lista degli invitati dal Grande Gatsby:');
 for(i=0 ; i<numInvitations ; i++) {
     console.log('Numero ' + i + ': ' + fakeNames[randomIndexes[i]]);
 }
-console.log('*** JSnack 2 completato ***');
+console.log('*** JSnack 3 completato ***');
 console.log('---------------------------------------------------------');
+
+/******************/
+/**** JSnack 4 ****/
+/******************/
