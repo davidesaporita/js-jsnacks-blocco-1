@@ -11,3 +11,29 @@
  * 
  */
 
+/*****************/
+/**** Snack 1 ****/
+/*****************/
+console.log('*** JSnack 1 in corso ***');
+do {
+    var word1 = prompt('JSnack-1 | Inserisci la prima parola: ');
+} while (!isNaN(word1));
+
+do {
+    var word2 = prompt('JSnack-1 | Inserisci la seconda parola: ');
+} while (!isNaN(word2));
+
+console.log('Parola 1: ' + word1);
+console.log('Parola 2: ' + word2);
+console.log('Parola più lunga: ' + checkLength(word1, word2));
+console.log('*** JSnack 1 completato ***');
+console.log('***************************');
+
+function checkLength(word1, word2) {
+    if( word1.length > word2.length ) {
+        return word1;
+    } else if( word2.length > word1.length ) {
+        return word2;
+    } 
+    return 'nessuna delle due';
+}
