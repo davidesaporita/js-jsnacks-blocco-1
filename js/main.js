@@ -11,23 +11,25 @@
  * 
  */
 
-/*****************/
-/**** Snack 1 ****/
-/*****************/
+/******************/
+/**** JSnack 1 ****/
+/******************/
 console.log('*** JSnack 1 in corso ***');
+var word1 = '';
+var word2 = '';
 do {
-    var word1 = prompt('JSnack-1 | Inserisci la prima parola: ');
+    word1 = prompt('JSnack-1 | Inserisci la prima parola:');
 } while (!isNaN(word1));
 
 do {
-    var word2 = prompt('JSnack-1 | Inserisci la seconda parola: ');
+    word2 = prompt('JSnack-1 | Inserisci la seconda parola:');
 } while (!isNaN(word2));
 
 console.log('Parola 1: ' + word1);
 console.log('Parola 2: ' + word2);
 console.log('Parola più lunga: ' + checkLength(word1, word2));
 console.log('*** JSnack 1 completato ***');
-console.log('***************************');
+console.log('---------------------------------------------------------');
 
 function checkLength(word1, word2) {
     if( word1.length > word2.length ) {
@@ -36,4 +38,24 @@ function checkLength(word1, word2) {
         return word2;
     } 
     return 'nessuna delle due';
+}
+
+/******************/
+/**** JSnack 2 ****/
+/******************/
+console.log('*** JSnack 2 in corso ***');
+var num;
+do {
+    num = parseInt(prompt('JSnack-2 | Inserisci un numero:'));
+} while (isNaN(num));
+console.log('Numero inserito: ' + num);
+console.log('Numero restituito: ' + isEven(num));
+console.log('*** JSnack 2 completato ***');
+console.log('---------------------------------------------------------');
+
+function isEven(num) {
+    if (num % 2 == 0) {
+        return num;
+    }
+    return ++num;
 }
